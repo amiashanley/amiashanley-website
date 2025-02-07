@@ -6,7 +6,7 @@
     <title>AMIAS HANLEY</title>
 
     <!-- Include Google Font in the <head> section -->
-        <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono&display=swap" rel="stylesheet">
     
     <style>
         body {
@@ -19,24 +19,41 @@
             background-color: #c1c0d0;
             color: #ff0000;
         }
-        .message {
-            text-align: center;
-            max-width: 600px; /* Set a maximum width for the container */
-            padding: 0 20px;  /* Add some padding for spacing */
-        }
+        
         h1 {
             font-size: 40px;
+            line-height: 1.2; /* Tighter spacing */
         }
+
         p {
             font-size: 20px;
+            line-height: 1.8; /* Looser spacing */
+        }
+
+        .message {
+            text-align: center;
+            max-width: 650px; /* Set a maximum width for the container */
+            padding: 0 20px;  /* Add some padding for spacing */
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 16px;
+            }
+            .message {
+                max-width: 90%; /* Use more screen space on small devices */
+            }
         }
     </style>
 </head>
 <body>
-    <div class="message">
+    <main class="message">
         <h1>bang, clank, ping!</h1>
-        <p>that's me in the back; i'm building something new - come back later and check it out</p>
+        <p>that's me in the back - i'm building something new come back later and check it out</p>
         <p>in the meantime, hmu at @amias_hanley / amiashanley@gmail.com</p>
-    </div>
+    </main>
 </body>
 </html>
