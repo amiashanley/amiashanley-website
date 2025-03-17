@@ -9,18 +9,22 @@
     
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin-top: 100px; /* Increase this value to pushes the content down the page vertically */
-            margin-left: 0;
-            margin-right: 0;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
             font-family: "Overpass Mono", monospace;
             background-color: #d3d3d3;
             color: #ff0000;
-            
+            min-height: 100vh;
+        }
+        
+        main {
+            padding: 20px;
+            padding-top: 5vh; /* Use viewport height for responsive padding */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 90vh; /* Takes up most of the viewport height */
         }
         
         h1 {
@@ -45,7 +49,6 @@
             font-size: 18px;
             margin-top: 40px;
             margin-bottom: 10px;
-
         }
 
         .message {
@@ -65,6 +68,7 @@
             line-height: 1.6;
             text-align: left;
         }
+        
         a {
             color:#ff0000; /* Matches the color of your heading text */
             text-decoration: none; /* Removes the underline */
@@ -74,25 +78,33 @@
             text-decoration: underline; /* Adds an underline on hover */
         }
 
-
-
         @media (max-width: 600px) {
             h1 {
                 font-size: 30px;
+                margin-top: 20px; /* Ensure there's space at the top on mobile */
             }
+            
             h2 {
                 font-size: 16px;
             }
+            
             p {
                 font-size: 16px;
             }
+            
             .message {
                 max-width: 90%;
             }
+            
             .bio {
                 font-size: 12px;
                 margin-left: 5%;
                 margin-right: 5%;
+            }
+            
+            main {
+                padding-top: 20px; /* Fixed padding for mobile */
+                min-height: auto; /* Allow the content to determine height */
             }
         }
     </style>
