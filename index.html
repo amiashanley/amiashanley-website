@@ -11,12 +11,13 @@
         body {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Changed to start aligning from the top */
             height: 100vh;
             margin: 0;
             font-family: "Overpass Mono", monospace;
             background-color: #d3d3d3;
             color: #ff0000;
+            padding: 20px; /* Added padding to avoid the content being flush with the edges */
         }
         
         h1 {
@@ -35,17 +36,18 @@
         .message {
             text-align: center;
             max-width: 650px;
+            width: 100%; /* Make it responsive */
             padding: 0 20px;
         }
 
         /* Bio-specific styles */
         .bio {
-            font-size: 14px; /* Adjusted to a more readable size */
+            font-size: 14px;
             margin-top: 20px;
-            margin-left: 20px; /* Added a little more space to the left */
-            margin-right: 20px; /* Added balance to the right */
+            margin-left: 20px;
+            margin-right: 20px;
             line-height: 1.6;
-            text-align: left; /* Align text to the left for bio */
+            text-align: left;
         }
 
         @media (max-width: 600px) {
@@ -59,7 +61,7 @@
                 max-width: 90%;
             }
             .bio {
-                font-size: 12px; /* Keep the smaller font for smaller screens */
+                font-size: 12px;
                 margin-left: 10px;
                 margin-right: 10px;
             }
