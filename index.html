@@ -4,134 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AMIAS HANLEY</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono&display=swap" rel="stylesheet">
-    
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Overpass Mono", monospace;
-            background-color: #d3d3d3;
-            color: #ff0000;
-            min-height: 100vh;
-        }
-        
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            padding-top: 5vh;
-            min-height: 90vh;
-            width: 100%;
-        }
-        
-        h1 {
-            font-size: 40px;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            overflow-wrap: break-word;
-            word-break: normal;
-            text-align: center;
-        }
-
-        h2 {
-            font-size: 20px;
-            line-height: 1.6;
-            margin-top: 10px;
-            margin-bottom: 20px;
-            overflow-wrap: break-word;
-            word-break: normal;
-            text-align: center;
-        }
-
-        h3 {
-            color: white;
-            font-size: 18px;
-            margin-top: 40px;
-            margin-bottom: 10px;
-        }
-
-        .message {
-            text-align: center;
-            max-width: 650px;
-            width: 100%;
-            padding: 0 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Bio-specific styles */
-        .bio {
-            color: white;
-            font-size: 14px;
-            margin-top: 50px;
-            margin-left: 20px;
-            margin-right: 20px;
-            line-height: 1.6;
-            text-align: left;
-            width: 100%;
-            max-width: 650px;
-        }
-        
-        a {
-            color:#ff0000;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 30px;
-                margin-top: 20px;
-            }
-            
-            h2 {
-                font-size: 16px;
-            }
-            
-            p {
-                font-size: 16px;
-            }
-            
-            .message {
-                max-width: 90%;
-            }
-            
-            .bio {
-                font-size: 12px;
-                margin-left: 0;
-                margin-right: 0;
-                width: 90%;
-            }
-            
-            main {
-                padding-top: 20px;
-                min-height: auto;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <main>
-        <div class="message">
-            <h1>bang, clank, ping!</h1>
-            <h2>that's me in the back - i'm building something new. come back later and check it out</h2>
-            <h2>in the meantime, hmu at <a href="https://www.instagram.com/amias_hanley/" target="_blank">@amias_hanley</a> / amiashanley@gmail.com</h2>
-            
-            <!-- Updated bio section -->
-            <div class="bio">
-                <h3>About Me</h3>
-                <p>Through site-responsive and speculative sonic encounters, I explore the ways sound is instrumentalised, entangled, and contested, particularly through queer ecologies and transgender studies, where it acts not just as a medium but as a method of resistance, refusal, and re-imagining.</p>
-                <p>These concerns intersect with non-human agency, technological mediation, and the biopolitics of communication—raising questions about who or what is being listened to, how meaning is assigned, and the power structures embedded in sonic mediation. My practice continues to investigate how listening and signal-making are never neutral acts but are enmeshed within histories of surveillance, environmental politics, and representation. By attending to these entanglements, I aim to generate sonic propositions that challenge fixed categories, invite alternative modes of sensing, and propose new ways of relating across species, environments, and technologies.</p>
+
+    <!-- Header Section -->
+    <header>
+        <h1><a href="/">AMIAS HANLEY</a></h1>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="container">
+
+        <!-- Sidebar Menu -->
+        <div class="sidebar">
+            <ul class="menu"></ul>
+        </div>
+
+        <!-- Home About block -->
+        <div class="home-about">
+            <div class="landing-about-image">
+                <img src="images/bio-images/002-amias-hanley-portrait-photo-devika-bilimoria.png"
+                     alt="Portrait of Amias Hanley - Image by Devika Bilimoria" loading="lazy">
+            </div>
+
+            <div class="landing-about-text">
+                <div class="project-description">
+                    <p>I explore how listening and signal-making entangle with sound-sensing infrastructures, sonic ecologies, and representational practices.</p>
+                    <p>Often using site-responsive and speculative methods, my work examines how sound becomes instrumentalised, entangled, and contested—particularly through queer ecologies and transgender studies. Within these frameworks, sound becomes a medium for investigation and a tool for resistance, refusal, and re-imagining.</p>
+                    <p>These inquiries intersect with sound technologies, auditory agency, and the biopolitics of communication. Together, they raise questions about who or what is being listened to, how meaning is assigned, and the power structures embedded in sonic relations.</p>
+                    <p>By attending to these entanglements through spatialised composition, installation, sculpture, creative computing, writing, and performance, I aim to generate sonic propositions that challenge fixed categories, invite alternative modes of sensing, and offer ways to relate across species, environments, and technologies. I am currently based in London.</p>
+                </div>
+
+                <section class="contact-academic">
+                    <p>
+                        If you would like to connect, please get in touch at amiashanley@gmail.com or 
+                        <a href="https://instagram.com/amias_hanley" target="_blank" rel="noopener noreferrer">@amias_hanley</a>
+                    </p>
+                </section>
             </div>
         </div>
-    </main>
+
+        <!-- Preview area for hover images/text -->
+        <div class="content-preview"></div>
+
+    </div> <!-- end .container -->
+
+    <!-- Footer (correct placement) -->
+    <footer>
+        <p>&copy; 2025 Amias Hanley. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
