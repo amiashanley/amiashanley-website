@@ -756,3 +756,28 @@ footer {
     clear: both;
   }
 }
+/* Vimeo embed styling for gallery */
+.vimeo-embed-wrapper {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden; /* Clip any overflow */
+    border-radius: 0; /* Optional: matches your other styling */
+}
+
+.vimeo-embed-wrapper > div {
+    overflow: hidden; /* Also clip the inner div */
+}
+
+.gallery-container .project-figure {
+    max-width: 800px;
+    width: 100%;
+    overflow: hidden; /* ← Add this to clip at the figure level too */
+}
+
+@media (max-width: 768px) {
+    .gallery-container .project-figure {
+        flex: 0 0 85vw;
+        max-width: 85vw;
+    }
+}
