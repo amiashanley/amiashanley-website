@@ -605,7 +605,7 @@ footer {
 
 /* Move text previews further right - HOME PAGE ONLY */
 .content-preview.preview--home .preview-text {
-  margin-left: 150px; /* adjust this value to move more/less to the right */
+  margin-left: 160px; /* adjust this value to move more/less to the right */
 }
 
 /* Keep inner pages text preview in default position */
