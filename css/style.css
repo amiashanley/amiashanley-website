@@ -781,3 +781,27 @@ footer {
         max-width: 85vw;
     }
 }
+/* Override mobile browser link defaults */
+.menu a,
+.menu-btn,
+.submenu-item,
+.submenu-item a,
+.nested-item,
+.nested-item a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-fill-color: currentColor;
+  color: #000000;
+}
+
+/* Ensure visited links don't turn blue/purple */
+.submenu-item a:visited,
+.nested-item a:visited {
+  color: #000000;
+}
+
+/* Keep nested items their specific gray color */
+.nested-item,
+.nested-item a,
+.nested-item a:visited {
+  color: #545353;
+}
