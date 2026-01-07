@@ -1,17 +1,6 @@
 // Get menu elements
 const menuContainer = document.querySelector(".menu");
 const contentPreview = document.querySelector(".content-preview");
-
-let aboutDismissed = false;
-
-function hideAboutSection() {
-    if (!aboutDismissed) {
-        const about = document.querySelector('.home-about');
-        if (about) about.style.display = 'none';
-        aboutDismissed = true;
-    }
-}
-
 function isHomePage() {
   const p = (window.location.pathname || '').toLowerCase();
 
@@ -478,14 +467,14 @@ generateMenu(menuData);
 
 // Hide About only when hovering actual submenu links (not top-level buttons or whitespace)
 menuContainer.addEventListener('mouseover', (e) => {
-  // Only on the home page, and only until we've already hidden it
-  if (!isHomePage() || aboutDismissed) return;
+  
+  // Only on the home page
+  if (!isHomePage()) return;
 
   // Only trigger when the pointer is over a submenu link (the actual item titles)
   const trigger = e.target.closest('.submenu-item a');
   if (!trigger) return;
 
-  hideAboutSection();
 });
 
 // Ensure preview host gets correct layout mode on page load
@@ -852,7 +841,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Identify the first meaningful content block
   const target =
-    document.querySelector('.project-container, .home-about, .content-area');
+    document.querySelector('.project-container, .content-area');
 
   if (!target) return;
 
