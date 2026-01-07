@@ -306,13 +306,11 @@ const menuData = [
       }
     ],
   },
-  /* commented out about page 
   {
     title: "ABOUT",
     url: "about/about.html",
     submenu: []
   }
-  */
 ];
 
 
