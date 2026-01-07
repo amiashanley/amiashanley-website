@@ -640,6 +640,50 @@ body.is-home header {
   display: none;
 }
 
+/* ===== HOME LANDING (index only) ===== */
+:root {
+  --sidebar-width: 19%;
+}
+
+/* Ensure sidebar width matches the landing offset */
+.sidebar {
+  width: var(--sidebar-width);
+  position: relative;
+  z-index: 2; /* above the landing surface */
+}
+
+/* Landing surface behind previews */
+body.is-home .landing-surface {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-width);
+  width: calc(100% - var(--sidebar-width));
+  height: 100vh;
+
+  /* Update this path to your real landing image */
+  background-image: url("../images/landing-font/016-landing-font-test.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60% 0%;
+
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.97;
+}
+
+/* Hide landing surface on inner pages */
+body:not(.is-home) .landing-surface {
+  display: none;
+}
+
+/* Previews must sit above everything */
+.content-preview {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+
 /* All mobile styles in one media query */
 @media (max-width: 768px) {
   
