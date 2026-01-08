@@ -742,6 +742,12 @@ body:not(.is-home) .landing-surface {
   .content-preview {
     display: none !important;
   }
+
+   /* Hide landing surface on mobile */
+  body.is-home .landing-surface {
+    display: none;
+  }
+}
   
   /* Publication cover plates */
   .publication-cover-plate {
