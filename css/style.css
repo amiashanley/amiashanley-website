@@ -683,8 +683,35 @@ body:not(.is-home) .landing-surface {
   pointer-events: none;
 }
 
+/* ===== Header image title ===== */
 
-/* All mobile styles in one media query */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.site-title-link {
+  display: inline-block;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.site-title-image {
+  display: block;
+  width: 100%;
+  max-width: min(560px);
+  height: auto;
+}
+
+
+/* ===== All mobile styles in one media query ===== */
 @media (max-width: 768px) {
   
   /* Stack and adjust general layout */
