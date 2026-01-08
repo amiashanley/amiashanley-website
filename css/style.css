@@ -782,7 +782,6 @@ body:not(.is-home) .landing-surface {
     object-fit: contain;
   }
   
-}
 /* Vimeo embed styling for gallery */
 .vimeo-embed-wrapper {
     width: 100%;
