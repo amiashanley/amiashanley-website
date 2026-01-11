@@ -661,7 +661,7 @@ body.is-home .landing-surface {
   height: 100vh;
 
   /* Update this path to your real landing image */
-  background-image: url("../images/landing-font/016-landing-font-test.png");
+  background-image: url("../images/landing-font/001-landing-font.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 60% 0%;
