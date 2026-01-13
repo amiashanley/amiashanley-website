@@ -427,8 +427,6 @@ footer {
   margin-top: 20px; 
 }
 
-/* Publication-specific styles */
-
 /* Publication entry container */
 .publication-entry {
   margin-bottom: 60px;
@@ -625,7 +623,7 @@ footer {
 }
 
 .contact-academic {
-    margin-top: 1.6em;
+    margin-top: 16px;
     font-size: 0.95rem;
     line-height: 1.5;
     clear: left;
@@ -635,6 +633,11 @@ footer {
 .contact-academic p {
     text-align: left;
 }
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
 
 body.is-home header {
   display: none;
@@ -710,6 +713,32 @@ body:not(.is-home) .landing-surface {
   height: auto;
 }
 
+/* About page: two-column layout */
+.about-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.about-text .project-title {
+  margin-top: 0;
+}
+
+.about-text {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.about-media {
+  flex: 0 0 min(360px, 40%);
+  margin: 0;
+}
+
+.about-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 /* ===== All mobile styles in one media query ===== */
 @media (max-width: 768px) {
@@ -730,6 +759,15 @@ body:not(.is-home) .landing-surface {
     margin-left: 0;
     padding: 15px;
     box-sizing: border-box;
+  }
+
+    .about-layout {
+    flex-direction: column;
+  }
+
+  .about-media {
+    flex: none;
+    width: 100%;
   }
   
   /* Header adjustments */
