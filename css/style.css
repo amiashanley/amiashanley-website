@@ -251,8 +251,9 @@ header .visually-hidden {
   text-align: center;
   padding: 40px 20px;
   margin-top: 100px;
-  max-width: 400px;
+  max-width: 450px;
   line-height: 1.4;
+  background-color: #ff5c26f0; /* or any color */
 }
 
 /* Override margin for subsequent entries */
@@ -280,19 +281,19 @@ header .visually-hidden {
   font-size: 0.85rem;
   font-weight: 300;
   margin-bottom: 8px;
-  color: #545353;
+  color: #000000;
 }
 
 .preview-role {
   font-size: 0.85rem;
   font-weight: 300;
   font-style: italic;
-  color: #545353;
+  color: #000000;
 }
 
 /* Move text previews further right - HOME PAGE ONLY */
 .content-preview.preview--home .preview-text {
-  margin-left: 160px;
+  margin-left: 150px;
 }
 
 /* Keep inner pages text preview in default position */
