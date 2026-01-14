@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,15 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="../script.js" defer></script>
 </head>
+
 <body>
     <!-- Header -->
     <header>
-        <h1><a href="/">Amias Hanley</a></h1>
+        <a href="/" class="site-title-link" aria-label="Amias Hanley">
+            <img src="/images/header-image/001-header-amias-hanley.png" alt="Amias Hanley" class="site-title-image"
+                loading="eager" decoding="async">
+        </a>
+        <h1 class="visually-hidden">Amias Hanley</h1>
     </header>
 
     <!-- Main Layout -->
@@ -19,64 +25,104 @@
         <div class="sidebar">
             <ul class="menu"></ul>
         </div>
-        
+
         <!-- Project Content -->
         <div class="content-area">
             <div class="project-container">
                 <!-- Image Gallery -->
                 <div class="gallery-container">
                     <figure class="project-figure">
-                        <img src="../images/hnf-images/001-hnf-amias-hanley.png" alt="Gallery Image 1" loading="lazy" class="gallery-image">
-                        <figcaption class="project-caption">View of the interactive browser-based noise map.</figcaption>
+                        <img src="../images/hnf-images/001-hnf-amias-hanley.png" alt="Gallery Image 1" loading="lazy"
+                            class="gallery-image">
+                        <figcaption class="project-caption">View of the interactive browser-based noise map.
+                        </figcaption>
                     </figure>
                     <figure class="project-figure">
-                        <img src="../images/hnf-images/004-hnf-amias-hanley.png" alt="Gallery Image 1" loading="lazy" class="gallery-image">
-                        <figcaption class="project-caption">Spectrogram showing two files classified as ‘noise’ by the model.</figcaption>
+                        <img src="../images/hnf-images/004-hnf-amias-hanley.png" alt="Gallery Image 1" loading="lazy"
+                            class="gallery-image">
+                        <figcaption class="project-caption">Spectrogram showing two files classified as ‘noise’ by the
+                            model.</figcaption>
                     </figure>
                     <figure class="project-figure">
-                        <img src="../images/hnf-images/005-hnf-amias-hanley.png" alt="Gallery Image 1" loading="lazy" class="gallery-image">
-                        <figcaption class="project-caption">Spectrogram showing two files classified as ‘signal’ by the model.</figcaption>
+                        <img src="../images/hnf-images/005-hnf-amias-hanley.png" alt="Gallery Image 1" loading="lazy"
+                            class="gallery-image">
+                        <figcaption class="project-caption">Spectrogram showing two files classified as ‘signal’ by the
+                            model.</figcaption>
                     </figure>
                     <figure class="project-figure">
-                        <img src="../images/hnf-images/007-hnf-amias-hanley.jpg" alt="Gallery Image 1" loading="lazy" class="gallery-image">
-                        <figcaption class="project-caption">Browser-based duo performance with interactive noise map; left: Amias Hanley, right: Vendla A. Haakonsen. Image: Claudia Gudin.</figcaption>
+                        <img src="../images/hnf-images/007-hnf-amias-hanley.jpg" alt="Gallery Image 1" loading="lazy"
+                            class="gallery-image">
+                        <figcaption class="project-caption">Browser-based duo performance with interactive noise map;
+                            left: Amias Hanley, right: Vendla A. Haakonsen. Image: Claudia Gudin.</figcaption>
                     </figure>
                     <figure class="project-figure">
                 </div>
 
-            <!--Project Details -->
-            <h1 class="project-title">HNF: Selection, Extraction, Exclusion</h1>
-            <p class="project-form-duration">Audio classification model, interactive browser-based noise map, performance-installation, dimensions variable</p>
-                
-            <!-- Project Description -->
-            <div class="project-description">
-                <p>HNF: Selection, Extraction, Exclusion (HNF) is a practice-based research project responding to digital audio material housed within the Her Noise Archive at UAL Archives and Special Collections Centre.</p>
-                <p>The project specifically engages with five of the six radio programmes from Melanie Clifford’s Her Noise Series (2005), broadcast on Resonance FM between 16.30–16.45 GMT throughout November and December 2005. These transmissions coincided with the Her Noise (2005) exhibition at South London Gallery, curated by Lina Džuverović and Anne Hilde Neset. Each of the five programmes contains an audible noise floor.</p>
-                <p>Commonly defined as the sum of all unwanted signals in an audio recording, the noise floor may include the hum of an air conditioner, birdsong, a police siren, or a child crying—depending on where you are listening from. A recording’s noise floor can be influenced by the materials and spatial properties of the room or environment, or self-generated through the thermal agitation of electrons in the circuitry of a recording device or microphone. In this sense, we might think of the noise floor as the result of millions of years of geologic formation.</p>
-                <p>Often treated as “unwanted sound” and disruptive to the desired “signal,” the noise floor finds a parallel in how the artists and curators of Her Noise (2005) were perceived relative to their male peers, as they “set out to insert the ‘missing women’ into art history” (Džuverović, 2016, p. 89). HNF asks: what can the noise floor in these archived recordings reveal about the histories, social relations, climate, and economic and geopolitical contexts in which Her Noise (2005) emerged?</p>
-                <p>HNF: Selection, Extraction, Exclusion (2024) engages creative computing and machine learning through critical approaches to archival audio. Comprising an audio classification model trained on recordings from the Her Noise Archive to separate “noise” from “signal,” and an interactive browser-based noise map, the work reframes the noise floor as a localised material imprinted with global climate systems, situating it within discourses on extractivism, digital labour, and machine listening.</p>
-                <p>Artist Vendla Aurora joined Amias Hanley at the Well Gallery in a live browser-based duo performance of the interactive noise map, which was amplified and projected as a large-scale video installation.</p>
-                <p class="contact-academic">Džuverović, L. 2016. 'Twice Erased: The Silencing of Feminisms in Her Noise', <i>Women and Music: A Journal of Gender and Culture</i>, Volume 20, pp. 88–95. DOI: <a href="https://doi.org/10.1353/wam.2016.0005" target="_blank" rel="noopener noreferrer">https://doi.org/10.1353/wam.2016.0005</a>.</p>
-<p class="contact-academic">Her Noise. 2005. [Exhibition]. London, UK. 10 November – 18 December. Available at: <a href="https://www.southlondongallery.org/exhibitions/her-noise/">https://www.southlondongallery.org/exhibitions/her-noise/</a>. (Accessed: 1 February 2024).</p>
-            </div>
+                <!--Project Details -->
+                <h1 class="project-title">HNF: Selection, Extraction, Exclusion</h1>
+                <p class="project-form-duration">Audio classification model, interactive browser-based noise map,
+                    performance-installation, dimensions variable</p>
+
+                <!-- Project Description -->
+                <div class="project-description">
+                    <p>HNF: Selection, Extraction, Exclusion (HNF) is a practice-based research project responding to
+                        digital audio material housed within the Her Noise Archive at UAL Archives and Special
+                        Collections Centre.</p>
+                    <p>The project specifically engages with five of the six radio programmes from Melanie Clifford’s
+                        Her Noise Series (2005), broadcast on Resonance FM between 16.30–16.45 GMT throughout November
+                        and December 2005. These transmissions coincided with the Her Noise (2005) exhibition at South
+                        London Gallery, curated by Lina Džuverović and Anne Hilde Neset. Each of the five programmes
+                        contains an audible noise floor.</p>
+                    <p>Commonly defined as the sum of all unwanted signals in an audio recording, the noise floor may
+                        include the hum of an air conditioner, birdsong, a police siren, or a child crying—depending on
+                        where you are listening from. A recording’s noise floor can be influenced by the materials and
+                        spatial properties of the room or environment, or self-generated through the thermal agitation
+                        of electrons in the circuitry of a recording device or microphone. In this sense, we might think
+                        of the noise floor as the result of millions of years of geologic formation.</p>
+                    <p>Often treated as “unwanted sound” and disruptive to the desired “signal,” the noise floor finds a
+                        parallel in how the artists and curators of Her Noise (2005) were perceived relative to their
+                        male peers, as they “set out to insert the ‘missing women’ into art history” (Džuverović, 2016,
+                        p. 89). HNF asks: what can the noise floor in these archived recordings reveal about the
+                        histories, social relations, climate, and economic and geopolitical contexts in which Her Noise
+                        (2005) emerged?</p>
+                    <p>HNF: Selection, Extraction, Exclusion (2024) engages creative computing and machine learning
+                        through critical approaches to archival audio. Comprising an audio classification model trained
+                        on recordings from the Her Noise Archive to separate “noise” from “signal,” and an interactive
+                        browser-based noise map, the work reframes the noise floor as a localised material imprinted
+                        with global climate systems, situating it within discourses on extractivism, digital labour, and
+                        machine listening.</p>
+                    <p>Artist Vendla Aurora joined Amias Hanley at the Well Gallery in a live browser-based duo
+                        performance of the interactive noise map, which was amplified and projected as a large-scale
+                        video installation.</p>
+                    <p class="contact-academic">Džuverović, L. 2016. 'Twice Erased: The Silencing of Feminisms in Her
+                        Noise', <i>Women and Music: A Journal of Gender and Culture</i>, Volume 20, pp. 88–95. DOI: <a
+                            href="https://doi.org/10.1353/wam.2016.0005" target="_blank"
+                            rel="noopener noreferrer">https://doi.org/10.1353/wam.2016.0005</a>.</p>
+                    <p class="contact-academic">Her Noise. 2005. [Exhibition]. London, UK. 10 November – 18 December.
+                        Available at: <a
+                            href="https://www.southlondongallery.org/exhibitions/her-noise/">https://www.southlondongallery.org/exhibitions/her-noise/</a>.
+                        (Accessed: 1 February 2024).</p>
+                </div>
 
                 <p class="project-year-place">2024 Well Gallery, London College of Communication</p>
                 <p class="project-group-show-title">
                 <p class="project-form">Browser-based performance-installation with interactive noise map</p>
 
-                 <!-- Item Link -->
+                <!-- Item Link -->
                 <div class="item-link">
-                    <a href="https://amiashanley.github.io/HNF/" target="_blank" rel="noopener">Visit HNF Interactive Noise Map</a>
+                    <a href="https://amiashanley.github.io/HNF/" target="_blank" rel="noopener">Visit HNF Interactive
+                        Noise Map</a>
                 </div>
 
-                </div> 
             </div>
         </div>
     </div>
-              
+    </div>
+
     <!-- Footer - properly outside the container -->
     <footer>
         <p>&copy; 2025 Amias Hanley. All Rights Reserved.</p>
     </footer>
 </body>
+
 </html>
