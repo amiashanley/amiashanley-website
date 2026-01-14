@@ -725,6 +725,11 @@ body.is-home header {
   display: none;
 }
 
+/* Landing menu top padding */
+body.is-home .container {
+  padding-top: 30px;
+}
+
 /* Landing surface behind previews */
 body.is-home .landing-surface {
   position: fixed;
