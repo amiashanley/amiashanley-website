@@ -165,6 +165,7 @@ const menuData = [
   },
   {
     title: "PUBLIC TALKS",
+    folder: "public-lectures",
     submenu: [
       { 
         title: "Trans*ferring the Field", 
@@ -193,6 +194,7 @@ const menuData = [
   },
   {
     title: "TEACHING",
+    folder: "pedagogy",
     submenu: [
       {
         title: "Maker of Sound",
@@ -349,7 +351,7 @@ function generateMenu(menuData) {
     submenu.className = "submenu";
 
     // Determine the folder name based on menu item title
-    const folderName = menuItem.title
+    const folderName = (menuItem.folder || menuItem.title)
       .toLowerCase()
       .replace(/\s+/g, '-');
 
