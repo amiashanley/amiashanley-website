@@ -222,7 +222,6 @@ const menuData = [
             role: "Visiting Tutor"
           },
           {
-            course: "Making Media",
             institution: "RMIT University, AU",
             year: "2020-2022",
             role: "Tutor"
