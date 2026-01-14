@@ -164,7 +164,7 @@ const menuData = [
     ],
   },
   {
-    title: "PUBLIC LECTURES",
+    title: "PUBLIC TALKS",
     submenu: [
       { 
         title: "Trans*ferring the Field", 
@@ -192,7 +192,7 @@ const menuData = [
     ],
   },
   {
-    title: "PEDAGOGY",
+    title: "TEACHING",
     submenu: [
       {
         title: "Maker of Sound",
