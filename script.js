@@ -25,17 +25,17 @@ function ensurePreviewHost() {
   }
 
   // Apply correct layout mode
-const home = isHomePage();
+  const home = isHomePage();
 
-// Home pages get the centred preview mode
-host.classList.toggle('preview--home', home);
+  // Home pages get the centred preview mode
+  host.classList.toggle('preview--home', home);
 
-// Inner pages should not have ANY preview mode class
-if (!home) {
+  // Inner pages should not have ANY preview mode class
+  if (!home) {
     host.classList.remove('preview--inner');
-}
+  }
 
-return (window.contentPreview = host);
+  return (window.contentPreview = host);
 }
 
 
@@ -70,7 +70,7 @@ const menuData = [
           "2022 Ars Electronica Festival",
           "2021 McClelland Sculpture Park and Gallery",
         ],
-        previewImage: "../images/sunkland-images/003-sunkland-mcclelland-collection-amias-hanley-photo-devika-bilimoria.jpg" 
+        previewImage: "../images/sunkland-images/003-sunkland-mcclelland-collection-amias-hanley-photo-devika-bilimoria.jpg"
       },
       {
         title: "Burial",
@@ -82,7 +82,7 @@ const menuData = [
         details: ["2023 Burrinja Cultural Centre"],
         previewImage: "../images/junction-re-sonant-images/031-junction-re-sonant-amias-hanley-photo-devika-bilimoria.jpg"
       },
-      { 
+      {
         title: "Before Nightfall #15",
         details: ["2022 Gertrude Contemporary"],
         previewImage: "../images/before-nightfall-15-images/001-before-nightfall-15-amias-hanley-photo-gertrude.jpg"
@@ -92,7 +92,7 @@ const menuData = [
         details: ["2022 Sonorous IV, The Substation"],
         previewImage: "../images/architectonics-for-ondes-musicales-images/48-architectonics-for-ondes-musicales-amias-hanley-photo-keelan-o-hehir.jpg"
       },
-      { 
+      {
         title: "Bogong High Plains Sound Map",
         details: ["2022 Bogong Centre for Sound Culture"],
         previewImage: "../images/bhpsm-images/60-bhpsm-photo-amias-hanley.jpg"
@@ -135,7 +135,7 @@ const menuData = [
   {
     title: "PUBLICATIONS",
     submenu: [
-      
+
       {
         title: "Aisles of Mimetica Tracing the Role of Acoustic Mimicry Across Species and Systems",
         details: ["2025 High Pitch Magazine"],
@@ -167,15 +167,15 @@ const menuData = [
     title: "PUBLIC TALKS",
     folder: "public-lectures",
     submenu: [
-      { 
-        title: "Trans*ferring the Field", 
+      {
+        title: "Trans*ferring the Field",
         details: [
           "2024 In the Field 2 (CRiSAP)",
           "2022 All School LAB",
         ],
         previewImage: "../images/trans-ferring-the-field-images/003-trans-ferring-the-field-images-amias-hanley-photo-crisap.jpg"
       },
-      { 
+      {
         title: "Listening Bodies, Listening Ecologies",
         details: ["2022 Audition Series"],
         previewImage: "../images/listening-bodies-images/001-listening-bodies-amias-hanley.jpg"
@@ -208,28 +208,28 @@ const menuData = [
         }
       },
       {
-  title: "Making Media",
-  details: [
-    "Bachelor of Design, Singapore Institute of Management, SG",
-    "Bachelor of Professional Communication, RMIT University, AU",
-  ],
-  previewType: "text",
-  previewText: {
-    course: "Making Media",
-    entries: [
-      {
-        institution: "Singapore Institute of Management, SG\n(RMIT offshore campus)",
-        year: "2023-2024",
-        role: "Visiting Tutor"
+        title: "Making Media",
+        details: [
+          "Bachelor of Design, Singapore Institute of Management, SG",
+          "Bachelor of Professional Communication, RMIT University, AU",
+        ],
+        previewType: "text",
+        previewText: {
+          course: "Making Media",
+          entries: [
+            {
+              institution: "Singapore Institute of Management, SG\n(RMIT offshore campus)",
+              year: "2023-2024",
+              role: "Visiting Tutor"
+            },
+            {
+              institution: "RMIT University, AU",
+              year: "2020-2022",
+              role: "Tutor"
+            }
+          ]
+        }
       },
-      {
-        institution: "RMIT University, AU",
-        year: "2020-2022",
-        role: "Tutor"
-      }
-    ]
-  }
-},
       {
         title: "Soundscape Studies",
         details: ["Master of Design Innovation and Technology, RMIT University, AU"],
@@ -318,23 +318,23 @@ function generateMenu(menuData) {
       const menuLink = document.createElement("a");
       menuLink.className = "menu-btn";
       menuLink.textContent = menuItem.title;
-      
+
       // Determine current location for path handling
       const currentPath = window.location.pathname;
-      const isInRoot = !currentPath.includes('/projects/') && 
-                       !currentPath.includes('/public-lectures/') && 
-                       !currentPath.includes('/publications/') && 
-                       !currentPath.includes('/pedagogy/') &&
-                       !currentPath.includes('/about/');
-      
+      const isInRoot = !currentPath.includes('/projects/') &&
+        !currentPath.includes('/public-lectures/') &&
+        !currentPath.includes('/publications/') &&
+        !currentPath.includes('/pedagogy/') &&
+        !currentPath.includes('/about/');
+
       // Set the href based on location
       menuLink.href = isInRoot ? menuItem.url : `../${menuItem.url}`;
-      
+
       // Style the link
       menuLink.style.display = "block";
       menuLink.style.textDecoration = "none";
       menuLink.style.color = "inherit";
-      
+
       // Add to menu and continue to next item
       menuItemElement.appendChild(menuLink);
       menuContainer.appendChild(menuItemElement);
@@ -367,7 +367,7 @@ function generateMenu(menuData) {
       const submenuElement = document.createElement("li");
       submenuElement.className = "submenu-item";
       submenuElement.tabIndex = 0; // <-- add this so the whole row can receive keyboard focus
-      
+
       // Set preview data based on type
       if (submenuItem.previewType === "text" && submenuItem.previewText) {
         submenuElement.setAttribute("data-preview-type", "text");
@@ -382,14 +382,14 @@ function generateMenu(menuData) {
 
       // Get the current location to adjust the relative path
       const currentPath = window.location.pathname;
-      
+
       // Determine if we're in a specific section folder
       const isInSection = currentPath.includes(`/${folderName}/`);
-      const isInRoot = !currentPath.includes('/projects/') && 
-                       !currentPath.includes('/public-lectures/') && 
-                       !currentPath.includes('/publications/') && 
-                       !currentPath.includes('/pedagogy/') &&
-                       !currentPath.includes('/about/');
+      const isInRoot = !currentPath.includes('/projects/') &&
+        !currentPath.includes('/public-lectures/') &&
+        !currentPath.includes('/publications/') &&
+        !currentPath.includes('/pedagogy/') &&
+        !currentPath.includes('/about/');
 
       // Generate filename from the submenu title
       const filename = submenuItem.title
@@ -441,7 +441,7 @@ function generateMenu(menuData) {
     // Add button and submenu to menu item
     menuItemElement.appendChild(menuButton);
     menuItemElement.appendChild(submenu);
-    
+
     // Add menu item to container
     menuContainer.appendChild(menuItemElement);
   });
@@ -450,12 +450,12 @@ function generateMenu(menuData) {
 // Dynamic image path handling based on current location
 function getImagePath(originalPath) {
   const currentPath = window.location.pathname;
-  const isInRoot = !currentPath.includes('/projects/') && 
-                   !currentPath.includes('/public-lectures/') && 
-                   !currentPath.includes('/publications/') && 
-                   !currentPath.includes('/pedagogy/') &&
-                   !currentPath.includes('/about/');
-  
+  const isInRoot = !currentPath.includes('/projects/') &&
+    !currentPath.includes('/public-lectures/') &&
+    !currentPath.includes('/publications/') &&
+    !currentPath.includes('/pedagogy/') &&
+    !currentPath.includes('/about/');
+
   if (isInRoot) {
     // On index page, remove the ../ prefix
     return originalPath.replace('../', '');
@@ -470,7 +470,7 @@ generateMenu(menuData);
 
 // Hide About only when hovering actual submenu links (not top-level buttons or whitespace)
 menuContainer.addEventListener('mouseover', (e) => {
-  
+
   // Only on the home page
   if (!isHomePage()) return;
 
@@ -778,11 +778,11 @@ function displayTextPreview(parentItem) {
 function createTextPreviewElement(data, index) {
   const textPreview = document.createElement("div");
   textPreview.className = "preview-text";
-  
+
   if (index > 0) {
     textPreview.classList.add("preview-text-subsequent");
   }
-  
+
   // Add course title once
   if (data.course) {
     const courseTitle = document.createElement("div");
@@ -790,7 +790,7 @@ function createTextPreviewElement(data, index) {
     courseTitle.textContent = data.course;
     textPreview.appendChild(courseTitle);
   }
-  
+
   // Check if this has nested entries
   if (data.entries && Array.isArray(data.entries)) {
     // Loop through nested entries
@@ -800,13 +800,13 @@ function createTextPreviewElement(data, index) {
         spacer.style.marginTop = "15px";
         textPreview.appendChild(spacer);
       }
-      
+
       const elements = [
         { className: "preview-institution", content: entry.institution },
         { className: "preview-year", content: entry.year },
         { className: "preview-role", content: entry.role }
       ];
-      
+
       elements.forEach(({ className, content }) => {
         if (content) {
           const element = document.createElement("div");
@@ -823,7 +823,7 @@ function createTextPreviewElement(data, index) {
       { className: "preview-year", content: data.year },
       { className: "preview-role", content: data.role }
     ];
-    
+
     elements.forEach(({ className, content }) => {
       if (content) {
         const element = document.createElement("div");
@@ -833,7 +833,7 @@ function createTextPreviewElement(data, index) {
       }
     });
   }
-  
+
   return textPreview;
 }
 
