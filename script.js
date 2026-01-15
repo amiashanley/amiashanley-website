@@ -137,9 +137,14 @@ const menuData = [
     submenu: [
 
       {
-        title: "Aisles of Mimetica Tracing the Role of Acoustic Mimicry Across Species and Systems",
+        title: "Aisles of Mimetica: Tracing the Role of Acoustic Mimicry Across Species and Systems",
         details: ["2025 High Pitch Magazine"],
         previewImage: "../images/high-pitch-images/003-high-pitch-amias-hanley.png"
+      },
+       {
+        title: "Interpolation: Towards a non-binary politics of listening",
+        details: ["2025 Musik and Gender"],
+        previewImage: "../images/musik-and-gender-images/001-musik-and-gender-amias-hanley.png"
       },
       {
         title: "Reimagining Geosocial Relations Through Speculative Listening Practices",

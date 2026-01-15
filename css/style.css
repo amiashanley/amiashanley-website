@@ -400,6 +400,15 @@ header .visually-hidden {
   text-decoration: underline;
 }
 
+.publication-citation a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.publication-citation a:hover {
+  text-decoration: underline;
+}
+
 /* Curator */
 .project-curator {
   font-size: 0.8rem;
