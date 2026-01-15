@@ -208,26 +208,28 @@ const menuData = [
         }
       },
       {
-        title: "Making Media",
-        details: [
-          "Bachelor of Design, Singapore Institute of Management, SG",
-          "Bachelor of Professional Communication, RMIT University, AU",
-        ],
-        previewType: "text",
-        previewText: [
-          {
-            course: "Making Media",
-            institution: "Singapore Institute of Management, SG\n(RMIT offshore campus)" , 
-            year: "2023-2024",
-            role: "Visiting Tutor"
-          },
-          {
-            institution: "RMIT University, AU",
-            year: "2020-2022",
-            role: "Tutor"
-          }
-        ]
+  title: "Making Media",
+  details: [
+    "Bachelor of Design, Singapore Institute of Management, SG",
+    "Bachelor of Professional Communication, RMIT University, AU",
+  ],
+  previewType: "text",
+  previewText: {
+    course: "Making Media",
+    entries: [
+      {
+        institution: "Singapore Institute of Management, SG\n(RMIT offshore campus)",
+        year: "2023-2024",
+        role: "Visiting Tutor"
       },
+      {
+        institution: "RMIT University, AU",
+        year: "2020-2022",
+        role: "Tutor"
+      }
+    ]
+  }
+},
       {
         title: "Soundscape Studies",
         details: ["Master of Design Innovation and Technology, RMIT University, AU"],
@@ -781,22 +783,56 @@ function createTextPreviewElement(data, index) {
     textPreview.classList.add("preview-text-subsequent");
   }
   
-  // Create elements with error checking
-  const elements = [
-    { className: "preview-course-title", content: data.course },
-    { className: "preview-institution", content: data.institution },
-    { className: "preview-year", content: data.year },
-    { className: "preview-role", content: data.role }
-  ];
+  // Add course title once
+  if (data.course) {
+    const courseTitle = document.createElement("div");
+    courseTitle.className = "preview-course-title";
+    courseTitle.textContent = data.course;
+    textPreview.appendChild(courseTitle);
+  }
   
-  elements.forEach(({ className, content }) => {
-    if (content) {
-      const element = document.createElement("div");
-      element.className = className;
-      element.textContent = content;
-      textPreview.appendChild(element);
-    }
-  });
+  // Check if this has nested entries
+  if (data.entries && Array.isArray(data.entries)) {
+    // Loop through nested entries
+    data.entries.forEach((entry, entryIndex) => {
+      if (entryIndex > 0) {
+        const spacer = document.createElement("div");
+        spacer.style.marginTop = "15px";
+        textPreview.appendChild(spacer);
+      }
+      
+      const elements = [
+        { className: "preview-institution", content: entry.institution },
+        { className: "preview-year", content: entry.year },
+        { className: "preview-role", content: entry.role }
+      ];
+      
+      elements.forEach(({ className, content }) => {
+        if (content) {
+          const element = document.createElement("div");
+          element.className = className;
+          element.textContent = content;
+          textPreview.appendChild(element);
+        }
+      });
+    });
+  } else {
+    // Old structure (no nested entries)
+    const elements = [
+      { className: "preview-institution", content: data.institution },
+      { className: "preview-year", content: data.year },
+      { className: "preview-role", content: data.role }
+    ];
+    
+    elements.forEach(({ className, content }) => {
+      if (content) {
+        const element = document.createElement("div");
+        element.className = className;
+        element.textContent = content;
+        textPreview.appendChild(element);
+      }
+    });
+  }
   
   return textPreview;
 }
