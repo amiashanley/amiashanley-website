@@ -742,8 +742,8 @@ body.is-home .landing-surface {
 
   background-image: url("../images/landing-font/001-landing-font.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 60% 0%;
+  background-size: 115% auto;
+  background-position: center center;
 
   z-index: 0;
   pointer-events: none;
