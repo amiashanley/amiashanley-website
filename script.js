@@ -198,7 +198,7 @@ const menuData = [
     submenu: [
       {
         title: "Maker of Sound",
-        details: ["Master of Fine Art, The Margate School, UK"],
+        details: ["Master of Fine Art, The Margate School of Art, UK"],
         previewType: "text",
         previewText: {
           course: "Maker of Sound",
