@@ -268,11 +268,12 @@ header .visually-hidden {
   font-weight: bold;
   margin-bottom: 15px;
   color: #000000;
+  text-transform: uppercase;
 }
 
 .preview-institution {
   font-size: 0.9rem;
-  font-weight: 400;
+  font-weight: bold;
   margin-bottom: 10px;
   color: #000000;
 }
