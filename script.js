@@ -202,9 +202,9 @@ const menuData = [
         previewType: "text",
         previewText: {
           course: "Maker of Sound",
-          institution: "The Margate School, UK",
-          year: "26 November 2024 - 28 January 2025",
-          role: "Tutor"
+          institution: "The Margate School of Art, UK",
+          year: "2024 - 2025",
+          role: "Sessional Tutor"
         }
       },
       {
@@ -219,13 +219,13 @@ const menuData = [
           entries: [
             {
               institution: "Singapore Institute of Management, SG\n(RMIT offshore campus)",
-              year: "2023-2024",
+              year: "2023 - 2024",
               role: "Visiting Tutor"
             },
             {
               institution: "RMIT University, AU",
-              year: "2020-2022",
-              role: "Tutor"
+              year: "2020 - 2022",
+              role: "Sessional Tutor"
             }
           ]
         }
@@ -237,7 +237,7 @@ const menuData = [
         previewText: {
           course: "Soundscape Studies",
           institution: "RMIT University, AU",
-          year: "2021-2022",
+          year: "2021 - 2022",
           role: "Studio Leader"
         }
       },
@@ -248,7 +248,7 @@ const menuData = [
         previewText: {
           course: "Sound Futures: Eco-techno approaches to sound and listening",
           institution: "RMIT University, AU",
-          year: "2020-2021",
+          year: "2020 - 2021",
           role: "Studio Leader"
         }
       },
@@ -259,7 +259,7 @@ const menuData = [
         previewText: {
           course: "Speculative Sound Design: Sonic imaginings & worlding with sound",
           institution: "RMIT University, AU",
-          year: "2019-2020",
+          year: "2019 - 2020",
           role: "Studio Leader"
         }
       },
@@ -270,7 +270,7 @@ const menuData = [
         previewText: {
           course: "To Be at Sea: Making site-responsive media in uncertain times",
           institution: "RMIT University, AU",
-          year: "2018-2019",
+          year: "2018 - 2019",
           role: "Studio Leader"
         }
       },
@@ -281,8 +281,8 @@ const menuData = [
         previewText: {
           course: "Media 1",
           institution: "RMIT University, AU",
-          year: "2017-2018",
-          role: "Tutor"
+          year: "2017 - 2018",
+          role: "Sessional Tutor"
         }
       },
       {
@@ -292,8 +292,8 @@ const menuData = [
         previewText: {
           course: "Story and Place in Media",
           institution: "RMIT University, AU",
-          year: "2016-2017",
-          role: "Tutor"
+          year: "2016 - 2017",
+          role: "Sessional Tutor"
         }
       }
     ],
