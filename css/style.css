@@ -787,7 +787,6 @@ body:not(.is-home) .landing-surface {
     padding: 10px 20px 10px 15px;
     box-sizing: border-box;
   }
-  }
 
   /* Override home page sidebar width on mobile */
   body.is-home .sidebar {
@@ -799,100 +798,102 @@ body:not(.is-home) .landing-surface {
     display: block !important;
   }
 
-.content-area,
-.project-container {
-  width: 100%;
-  max-width: 100%;
-  margin-left: 0;
-  padding: 15px;
-  box-sizing: border-box;
+  .content-area,
+  .project-container {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  /* About page: stack */
+  .about-layout {
+    flex-direction: column;
+  }
+
+  .about-media {
+    flex: none;
+    width: 100%;
+  }
+
+  /* Header image sizing on small screens */
+  .site-title-image {
+    max-width: min(560px, 92vw);
+  }
+
+  /* Hide previews on mobile */
+  .content-preview {
+    display: none !important;
+  }
+
+  /* Hide landing surface on mobile */
+  body.is-home .landing-surface {
+    display: none;
+  }
+
+  /* Preview image max-height adjustment */
+  .preview-image {
+    max-height: 300px;
+  }
+
+  /* Publication cover plates */
+  .publication-cover-plate {
+    padding: 20px 15px;
+    box-sizing: border-box;
+  }
+
+  /* Gallery: horizontal scroll with mixed image sizes */
+  .gallery-container {
+    gap: 15px;
+    padding: 10px 5px;
+    align-items: center;
+  }
+
+  .gallery-container .project-figure {
+    flex: 0 0 85vw;
+    max-width: 85vw;
+  }
+
+  .gallery-container .gallery-image {
+    max-width: 100%;
+    max-height: 60vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .gallery-container .gallery-video {
+    max-width: 100%;
+    max-height: 60vh;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
 }
 
-/* About page: stack */
-.about-layout {
-  flex-direction: column;
-}
+  /* Override mobile browser link defaults (applies everywhere, safe) */
+  .menu a,
+  .menu-btn,
+  .submenu-item,
+  .submenu-item a,
+  .nested-item,
+  .nested-item a {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-fill-color: currentColor;
+    color: #000000;
+  }
 
-.about-media {
-  flex: none;
-  width: 100%;
-}
+  /* Ensure visited links don't turn blue/purple */
+  .submenu-item a:visited,
+  .nested-item a:visited {
+    color: #000000;
+  }
 
-/* Header image sizing on small screens */
-.site-title-image {
-  max-width: min(560px, 92vw);
-}
-
-/* Hide previews on mobile */
-.content-preview {
-  display: none !important;
-}
-
-/* Hide landing surface on mobile */
-body.is-home .landing-surface {
-  display: none;
-}
-
-/* Preview image max-height adjustment */
-.preview-image {
-  max-height: 300px;
-}
-
-/* Publication cover plates */
-.publication-cover-plate {
-  padding: 20px 15px;
-  box-sizing: border-box;
-}
-
-/* Gallery: horizontal scroll with mixed image sizes */
-.gallery-container {
-  gap: 15px;
-  padding: 10px 5px;
-  align-items: center;
-}
-
-.gallery-container .project-figure {
-  flex: 0 0 85vw;
-  max-width: 85vw;
-}
-
-.gallery-container .gallery-image {
-  max-width: 100%;
-  max-height: 60vh;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-}
-
-.gallery-container .gallery-video {
-  max-width: 100%;
-  max-height: 60vh;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-/* Override mobile browser link defaults (applies everywhere, safe) */
-.menu a,
-.menu-btn,
-.submenu-item,
-.submenu-item a,
-.nested-item,
-.nested-item a {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-text-fill-color: currentColor;
-  color: #000000;
-}
-
-/* Ensure visited links don't turn blue/purple */
-.submenu-item a:visited,
-.nested-item a:visited {
-  color: #000000;
-}
-
-/* Keep nested items their specific gray color */
-.nested-item,
-.nested-item a,
-.nested-item a:visited {
-  color: #545353;
-}
+  /* Keep nested items their specific gray color */
+  .nested-item,
+  .nested-item a,
+  .nested-item a:visited {
+    color: #545353;
+  }
