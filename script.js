@@ -896,4 +896,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 150);
 
 });
+// Preload preview images on page load
+document.addEventListener('DOMContentLoaded', () => {
+  const previewItems = document.querySelectorAll('[data-preview-image]');
+  previewItems.forEach(item => {
+    const imgSrc = item.dataset.previewImage;
+    if (imgSrc) {
+      const img = new Image();
+      img.src = getImagePath(imgSrc);
+    }
+  });
+});
 
