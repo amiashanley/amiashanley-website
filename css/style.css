@@ -51,7 +51,8 @@ header h1 {
   font-size: clamp(4rem, 8vw, 8rem);
   letter-spacing: 0.02em;
   line-height: 1;
-  margin: 0; /* prevent stray spacing if h1 exists */
+  margin: 0;
+  /* prevent stray spacing if h1 exists */
   text-transform: uppercase;
 }
 
@@ -85,7 +86,8 @@ header h1 a {
 .site-title-image {
   display: block;
   width: 100%;
-  max-width: 560px; /* fixed: was invalid min(560px) */
+  max-width: 560px;
+  /* fixed: was invalid min(560px) */
   height: auto;
   margin: 0 auto;
 }
@@ -115,7 +117,8 @@ header .visually-hidden {
   border-right: 2px solid #ffffff;
   scrollbar-gutter: stable;
   position: relative;
-  z-index: 2; /* stays above landing surface on home */
+  z-index: 2;
+  /* stays above landing surface on home */
 }
 
 .menu {
@@ -195,7 +198,7 @@ header .visually-hidden {
 
 /* Active state */
 .submenu a.is-active,
-.submenu li.is-active > a {
+.submenu li.is-active>a {
   background: var(--active-bg, #ff5c26f0);
 }
 
@@ -208,7 +211,8 @@ header .visually-hidden {
   position: fixed;
   z-index: 9999;
   pointer-events: none;
-  display: none; /* JS will toggle this */
+  display: none;
+  /* JS will toggle this */
   text-align: center;
 }
 
@@ -253,7 +257,8 @@ header .visually-hidden {
   margin-top: 100px;
   max-width: 450px;
   line-height: 1.4;
-  background-color: #ff5c26f0; /* or any color */
+  background-color: #ff5c26f0;
+  /* or any color */
 }
 
 /* Override margin for subsequent entries */
@@ -359,7 +364,7 @@ header .visually-hidden {
   color: #000000;
 }
 
-.project-description p + p {
+.project-description p+p {
   text-indent: 0em;
 }
 
@@ -524,7 +529,7 @@ header .visually-hidden {
   border-radius: 0;
 }
 
-.vimeo-embed-wrapper > div {
+.vimeo-embed-wrapper>div {
   overflow: hidden;
 }
 
@@ -769,6 +774,7 @@ body:not(.is-home) .landing-surface {
    ========================= */
 
 @media (max-width: 768px) {
+
   /* Stack and adjust general layout */
   .container {
     flex-direction: column;
@@ -779,6 +785,11 @@ body:not(.is-home) .landing-surface {
     max-width: 100%;
     border-right: none;
     padding: 10px 15px;
+  }
+
+  .menu-btn {
+    font-size: 0.70rem;
+
   }
 
   .content-area,
