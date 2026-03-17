@@ -725,12 +725,6 @@ footer {
    About page layout
    ========================= */
 
-.about-layout {
-  display: flex;
-  gap: 24px;
-  align-items: flex-start;
-}
-
 .about-text {
   flex: 1 1 0;
   min-width: 0;
@@ -742,17 +736,6 @@ footer {
 
 .about-text p:last-child {
   margin-bottom: 0;
-}
-
-.about-media {
-  flex: 0 0 min(360px, 40%);
-  margin: 0;
-}
-
-.about-image {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 /* =========================
@@ -842,11 +825,6 @@ body:not(.is-home) .landing-surface {
   /* About page: stack */
   .about-layout {
     flex-direction: column;
-  }
-
-  .about-media {
-    flex: none;
-    width: 100%;
   }
 
   /* Header image sizing on small screens */
